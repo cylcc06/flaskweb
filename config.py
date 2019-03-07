@@ -10,7 +10,9 @@ class Config:
     FLASKY_MAIL_SUBJECT_PREFIX = '[cylcc]'
     FLASKY_MAIL_SENDER = 'cylcc Admin <cylcc06@126.com>'
     FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    SQLALCHEMY_RECORD_QUERIES = True
+    SQLALCHEMY_ECHO=True
     @staticmethod
     def init_app(app):
         pass
