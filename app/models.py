@@ -153,6 +153,8 @@ class User(db.Model,UserMixin):
         return self.role is not None and self.role.has_permission(perm)
 
     def is_administrator(self):
+        print('是否是amdin')
+        print(self.can(Permission.ADMIN))
         return self.can(Permission.ADMIN)
     #刷新用户的最后访问时间
     def ping(self):
